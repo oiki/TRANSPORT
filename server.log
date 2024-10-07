@@ -102,3 +102,20 @@ ActionView::Template::Error (undefined method `transports_path' for #<ActionView
     6:       <h2><%= pluralize(@transport.errors.count, "error") %> prohibited this transport from being saved:</h2>
   
 app/views/soignant/index.html.erb:3
+Started GET "/" for 86.209.129.66 at 2024-10-07 10:14:01 +0000
+Cannot render console from 86.209.129.66! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SoignantController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering soignant/index.html.erb within layouts/application
+  [1m[36mTransport Load (0.1ms)[0m  [1m[34mSELECT "transports".* FROM "transports"[0m
+  ↳ app/views/soignant/index.html.erb:46
+  Rendered soignant/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 4402)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 5758)
+Completed 200 OK in 21ms (Views: 12.3ms | ActiveRecord: 2.1ms | Allocations: 11596)
+
+
+Started POST "/transports" for 86.209.129.66 at 2024-10-07 10:14:22 +0000
+Cannot render console from 86.209.129.66! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (uninitialized constant TransportsController):
+  
