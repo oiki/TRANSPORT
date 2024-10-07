@@ -1,0 +1,2 @@
+class RegulationController < ApplicationController
+end

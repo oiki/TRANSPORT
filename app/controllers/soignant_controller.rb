@@ -1,0 +1,2 @@
+class SoignantController < ApplicationController
+end
