@@ -6,7 +6,7 @@ class SoignantController < ApplicationController
 
   def create
     @transport = Transport.new(transport_params)
-    @transport.requested_by = current_user.id
+    @transport.requested_by = 1  # Hardcoded user ID for testing
     if @transport.save
       redirect_to soignant_index_path, notice: 'Transport request was successfully created.'
     else
