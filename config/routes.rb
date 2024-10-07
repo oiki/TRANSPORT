@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root "soignant#index"
 
   resources :soignant, only: [:index, :create]
+  resources :transports, only: [:create]
   resources :regulation, only: [:index] do
     collection do
       get 'history'

@@ -40,3 +40,65 @@ Processing by SoignantController#index as HTML
 Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1418)
 
 
+Started GET "/" for 86.209.129.66 at 2024-10-07 10:11:54 +0000
+Cannot render console from 86.209.129.66! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SoignantController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering soignant/index.html.erb within layouts/application
+  Rendered soignant/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2927)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3017)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 5034)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Generate Transport Requests</h1>
+    2: 
+    3: <%= form_with(model: @transport, local: true) do |form| %>
+    4:   <% if @transport.errors.any? %>
+    5:     <div id="error_explanation">
+    6:       <h2><%= pluralize(@transport.errors.count, "error") %> prohibited this transport from being saved:</h2>
+    7:       <ul>
+  
+app/views/soignant/index.html.erb:4
+app/views/soignant/index.html.erb:3
+Started GET "/" for 86.209.129.66 at 2024-10-07 10:13:41 +0000
+Cannot render console from 86.209.129.66! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SoignantController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering soignant/index.html.erb within layouts/application
+  Rendered soignant/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 3890)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3971)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 3.0ms | Allocations: 25303)
+
+
+  
+ActionView::Template::Error (undefined method `transports_path' for #<ActionView::Base:0x00000000011a58>):
+    1: <h1>Generate Transport Requests</h1>
+    2: 
+    3: <%= form_with(model: @transport, local: true) do |form| %>
+    4:   <% if @transport.errors.any? %>
+    5:     <div id="error_explanation">
+    6:       <h2><%= pluralize(@transport.errors.count, "error") %> prohibited this transport from being saved:</h2>
+  
+app/views/soignant/index.html.erb:3
+Started GET "/" for 86.209.129.66 at 2024-10-07 10:13:51 +0000
+Cannot render console from 86.209.129.66! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SoignantController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering soignant/index.html.erb within layouts/application
+  Rendered soignant/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 3251)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3326)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3637)
+
+
+  
+ActionView::Template::Error (undefined method `transports_path' for #<ActionView::Base:0x00000000011c10>):
+    1: <h1>Generate Transport Requests</h1>
+    2: 
+    3: <%= form_with(model: @transport, local: true) do |form| %>
+    4:   <% if @transport.errors.any? %>
+    5:     <div id="error_explanation">
+    6:       <h2><%= pluralize(@transport.errors.count, "error") %> prohibited this transport from being saved:</h2>
+  
+app/views/soignant/index.html.erb:3

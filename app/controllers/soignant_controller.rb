@@ -1,6 +1,7 @@
 class SoignantController < ApplicationController
   def index
     @transports = Transport.all
+    @transport = Transport.new
   end
 
   def create
