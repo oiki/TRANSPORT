@@ -1,1 +1,55 @@
 <h1>Generate Transport Requests</h1>
+
+<%= form_with(model: @transport, local: true) do |form| %>
+  <% if @transport.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@transport.errors.count, "error") %> prohibited this transport from being saved:</h2>
+      <ul>
+        <% @transport.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :assigned_to %>
+    <%= form.number_field :assigned_to %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<h2>Existing Transport Requests</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Assigned To</th>
+      <th>Requested By</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @transports.each do |transport| %>
+      <tr>
+        <td><%= transport.description %></td>
+        <td><%= transport.status %></td>
+        <td><%= transport.assigned_to %></td>
+        <td><%= transport.requested_by %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

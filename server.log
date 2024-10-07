@@ -30,3 +30,13 @@ Processing by SoignantController#index as HTML
 Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1524)
 
 
+Started GET "/" for 86.209.129.66 at 2024-10-07 10:09:42 +0000
+Cannot render console from 86.209.129.66! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SoignantController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering soignant/index.html.erb within layouts/application
+  Rendered soignant/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1122)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1418)
+
+
