@@ -119,3 +119,26 @@ Cannot render console from 86.209.129.66! Allowed networks: 127.0.0.0/127.255.25
   
 ActionController::RoutingError (uninitialized constant TransportsController):
   
+Started GET "/" for 86.209.129.66 at 2024-10-07 10:21:50 +0000
+Cannot render console from 86.209.129.66! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SoignantController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering soignant/index.html.erb within layouts/application
+  [1m[36mTransport Load (1.1ms)[0m  [1m[34mSELECT "transports".* FROM "transports"[0m
+  ↳ app/views/soignant/index.html.erb:46
+  Rendered soignant/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2728)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4027)
+Completed 200 OK in 15ms (Views: 7.4ms | ActiveRecord: 1.7ms | Allocations: 9084)
+
+
+Started POST "/transports" for 86.209.129.66 at 2024-10-07 10:21:57 +0000
+Cannot render console from 86.209.129.66! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TransportsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "transport"=>{"description"=>"test", "status"=>"test", "assigned_to"=>"1"}, "commit"=>"Create Transport"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3638)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<TransportsController:0x00000000018df8>):
+  
+app/controllers/transports_controller.rb:4:in `create'
